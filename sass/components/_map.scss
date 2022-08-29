@@ -1,0 +1,162 @@
+@use '../abstracts' as a;
+
+.map {
+
+    &__title {
+        @include a.section_title;
+        //margin-bottom: 4rem;
+    }
+
+    &__text {
+        //max-width: 113rem;
+        //margin: 0 auto;
+        padding: 0 10rem 5rem;
+
+        @include a.respond(screen_767) {
+            max-width: 100%;
+            padding: 0 0 5rem 0;
+        }
+
+    }
+
+    &__container {
+        max-width: 150rem;
+        height: 90rem;        
+        margin: 0 auto;
+        // left: 50%;
+        // transform: translateX(-50%);
+
+        @include a.respond(screen_900) {
+            height: 60rem;
+        }
+
+    }
+
+    
+
+    .gmap {
+        height: 100%;
+        border-radius: a.$border-radius-l;
+    }
+
+}
+
+.marker {
+    display: grid;
+    row-gap: 1rem;
+    font-family: a.$font-secondary;
+
+    &--hp {
+        a {
+            &:hover {
+                color: a.$color-blue;
+            }
+        }        
+    }
+
+    &--bam {
+        a {
+            &:hover {
+                color: a.$color-green;
+            }
+        }        
+    }
+
+    a {
+        color: a.$color-gray-d;
+        font-size: 1.2rem;
+    }
+
+    &__title {        
+        font-size: 1.4rem;
+
+        &--hp {
+            color: a.$color-blue;
+        }
+
+        &--bam {
+            color: a.$color-green;
+        }
+
+    }
+    
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, 22rem);
+    column-gap: 10rem;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    font-size: 1.8rem;
+    color: a.$color-gray-d;
+    font-family: a.$font-secondary;
+
+    @include a.respond(screen_767) {
+        grid-template-columns: 22rem;
+        margin-top: 2rem;
+        row-gap: 2rem;
+    }
+
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    column-gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    color: a.$color-blue;
+
+    &--hp {
+        color: a.$color-blue;
+    }
+
+    &--bam {
+        color: a.$color-green;
+    }
+
+    &__checkbox {        
+        width: 3rem;
+        height: 3rem;        
+        border-radius: 1rem 0 1rem;
+        position: relative;
+        transition: all .2s;
+
+        &--hp {
+            background-color: a.$color-blue;
+            border: 2px solid a.$color-blue;
+        }
+
+        &--bam {
+            background-color: a.$color-green;
+            border: 2px solid a.$color-green;
+        }
+    
+        &::before {
+            content: "";
+            width: 10px;
+            height: 1.8rem;
+            position: absolute;
+            // left: 6px;
+            // top: 2px;
+            // left: 9px;
+            // top: 3px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(40deg);
+            border-width: 2px;
+            border-style: solid;
+            border-width: 0px 4px 4px 0;
+            border-color: a.$color-white;
+        }
+    
+        &.unchecked {
+            background-color: a.$color-white;
+        }
+    
+    }
+
+}
+

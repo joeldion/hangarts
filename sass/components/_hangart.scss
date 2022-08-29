@@ -1,0 +1,96 @@
+@use '../abstracts' as a;
+
+.hangarts {
+    @include a.get_grid;
+
+    @include a.respond(screen_1200) {
+        grid-template-columns: 1fr;
+    }
+
+    
+    &__title {
+        grid-column: span 2;
+        @include a.section_title;
+
+        @include a.respond(screen_1200) {
+            grid-column: 1;
+        }
+
+    }
+
+}
+
+.hangart {
+
+    img {
+        border-radius: a.$border-radius-l;
+    } 
+    
+    &__info {
+        font-family: a.$font-secondary;
+    }
+
+    &__title {
+        margin: 3rem 0 1.5rem;
+        font-size: 2.8rem;
+        font-family: a.$font-primary;
+        color: a.$color-red;
+    }
+
+    &__desc {
+        font-family: a.$font-primary;
+        font-size: 2rem;
+        color: a.$color-gray-d;
+    }
+
+    &__contact {
+        color: a.$color-black;
+        list-style: none;
+        display: inline-block;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        font-size: 1.6rem;
+
+        &::before {
+            content: '';
+            width: 3rem;
+            height: 3rem; 
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 2.4rem;
+        }
+
+        &:hover {
+            color: a.$color-red;
+        }
+
+        &--address {
+            &::before {
+                background-image: url(a.$icon-location);
+            }
+        }
+        &--phone {
+            &::before {
+                background-image: url(a.$icon-phone);
+            }
+        }
+        &--email {
+            &::before {
+                background-image: url(a.$icon-email);
+            }
+        }
+
+    }
+
+    &__cta {
+        background-color: a.$color-blue;
+        margin-top: 2rem;
+        display: inline-block;
+        text-transform: uppercase;
+        @include a.button;
+
+    }
+
+}

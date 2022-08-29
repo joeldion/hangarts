@@ -1,0 +1,25 @@
+// COLORS
+$color-yellow: #feb711;
+$color-green: #01ab52;
+$color-purple: #a1217e;
+$color-red: #f0483f;
+$color-blue: #00a1df;
+$color-white: #fff;
+$color-black: #000;
+$color-gray-d: #666;
+$color-gray-l: #d3d3d3;
+
+// FONTS
+$font-primary: 'Gochi Hand';
+$font-secondary: 'Poppins';
+
+// MISC
+$border-radius-s: 2rem 0;
+$border-radius-l: 4rem 0;
+$theme-path: '/wp-content/themes/hangarts';
+
+// ICONS
+$icon-location: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23' + str-slice('#{$color-red}', 2) + '" width="32" height="32"><path d="M16 0A10 10 0 0 0 6 10c0 10 10 22 10 22s10-12 10-22A10 10 0 0 0 16 0zm0 16a6 6 0 1 1 0-12 6 6 0 1 1 0 12z"/></svg>';
+$icon-phone: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23' + str-slice('#{$color-red}', 2) + '" width="32" height="32"><path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"/></svg>';
+$icon-email: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23' + str-slice('#{$color-red}', 2) + '" width="32" height="32"><path d="M29 4H3a3.01 3.01 0 0 0-3 3v20a3.01 3.01 0 0 0 3 3h26a3.01 3.01 0 0 0 3-3V7a3.01 3.01 0 0 0-3-3zM12.461 17.199L4 23.789V8.113l8.461 9.086zM5.512 8h20.976L16 15.875 5.512 8zm7.278 9.553L16 21l3.21-3.447L25.79 26H6.211l6.58-8.447zm6.749-.354L28 8.113v15.676l-8.461-6.59z"/></svg>';
+$icon-arrow: 'data:image/svg+xml;utf8,<svg fill="%23' + str-slice('#{$color-white}', 2) + '" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M16 1L1 16h9v16h12V16h9z"/></svg>';

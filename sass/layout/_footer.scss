@@ -1,0 +1,9 @@
+@use '../abstracts' as a;
+
+.footer {
+    padding: 3rem;
+    // background-color: a.$color-green;
+    background-color: a.$color-blue;
+    color: a.$color-white;
+    text-align: center;
+}

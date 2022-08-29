@@ -1,0 +1,69 @@
+@use './variables' as *;
+
+// Responsive 
+@mixin respond($breakpoint, $minmax: max) {
+    @if $breakpoint == screen_1200 {
+        @media only screen and (#{$minmax}-width: 75em) {
+        @content;
+        } // <= 1200px
+    }
+
+    @if $breakpoint == screen_900 {
+        @media only screen and (#{$minmax}-width: 56.25em) {
+        @content;
+        } // <= 900px
+    }
+
+    @if $breakpoint == screen_767 {
+        @media only screen and (#{$minmax}-width: 47.9em) {
+        @content;
+        } // <= 767px
+    }
+
+    @if $breakpoint == screen_500 {
+        @media only screen and (#{$minmax}-width: 31.25em) {
+        @content;
+        } // <= 500px
+    }
+}
+
+// HiRes (Retina)
+@mixin hi_res() {
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+        @content;
+    }
+
+}
+
+// Columns
+@mixin get_grid() {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20rem, 70rem));
+    grid-gap: 10rem;
+    margin: 0 auto;
+}
+
+// CTA Hover 
+@mixin button() {
+    border-radius: $border-radius-s;
+    color: $color-white;
+    padding: 1.5rem 2rem;
+
+    &:hover {
+        background-color: $color-black;
+    }
+
+}
+
+// Section Title
+@mixin section_title() {
+    color: $color-blue;
+    text-align: center;
+}

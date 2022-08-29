@@ -1,0 +1,101 @@
+@use '../abstracts' as a;
+
+.main-content {
+    // background-color: orangered;
+    padding: 0 10rem;
+    display: grid;
+    row-gap: 10rem;
+
+    @include a.respond(screen_1200) {
+        padding: 0 5rem;
+    }
+
+    @include a.respond(screen_767) {
+        padding: 0 2rem;
+    }
+
+}
+
+.intro {
+    // max-width: 105rem;
+    margin: 0 auto;
+    @include a.get_grid;
+
+    @include a.respond(screen_1200) {
+        grid-gap: 5rem;
+    }
+
+    @include a.respond(screen_900) {
+        grid-template-columns: 1fr;
+    }
+
+    &__text {}
+
+    &__image {
+        img {
+            border-radius: a.$border-radius-l;
+        }
+    }
+
+    &__cta {
+        background-color: a.$color-red;
+        display: inline-block;
+        margin-top: 2rem;
+        @include a.button;
+    }
+
+}
+
+.section {
+
+    &__head {
+        grid-column: 1 / -1;
+        display: grid;
+        row-gap: 5rem;
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: a.$color-blue;
+        text-align: center;
+    }
+
+    &__text {
+        padding: 0 10rem;
+    }
+
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 40rem;
+    row-gap: 3rem;
+    text-align: center;
+    margin: 10rem auto 0;
+    // margin: 0 auto;
+
+    @include a.respond(screen_1200) {
+    //    grid-template-columns: repeat(2, 30rem);
+    //    column-gap: 0;
+    }
+
+    @include a.respond(screen_767) {
+        margin: 8rem auto 0;
+    }
+
+    &__title {
+        @include a.section_title;
+    }
+
+    &__item {        
+        color: a.$color-gray-d;
+        font-size: 1.8rem;
+
+        &:hover {
+            color: a.$color-blue;
+        }
+
+    }
+
+}

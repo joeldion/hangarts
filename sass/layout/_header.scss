@@ -1,0 +1,112 @@
+@use '../abstracts' as a;
+
+.header {
+    // background-color: a.$color-black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__content {
+        color: a.$color-white;
+        text-align: center;
+        display: grid;
+        row-gap: 3rem;
+        max-width: 82rem;
+
+        @include a.respond(screen_767) {
+            padding: 0 1.5rem;
+        }
+
+    }
+
+    &__logo {
+        margin: 0 auto;
+        max-width: 30rem;
+    }
+
+    &__subtitle {        
+        font-size: 3.6rem;
+
+        @include a.respond(screen_767) {
+            font-size: 3rem;
+        }
+
+    }
+
+    &__dates {
+        font-size: 2.6rem;
+    }
+
+    &__video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(90deg, a.$color-gray-d 0%, a.$color-black 100%);
+            opacity: .9;
+        }
+
+        &--mobile {
+            background-image: url(#{a.$theme-path}/img/backgrounds/bg-header-mobile-1x.jpg);
+            opacity: .8;
+
+            @include a.hi_res() {
+                background-image: url(#{a.$theme-path}/img/backgrounds/bg-header-mobile-2x.jpg);
+            }
+
+        }
+
+    }
+
+    &__cta {
+        display: grid;
+        grid-template-columns: max-content;
+        justify-content: center;
+        text-align: center;
+
+        > a {
+            color: a.$color-white;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            display: grid;
+            justify-content: center;
+            row-gap: 2rem;
+
+            &::after {
+                content: '\232A';
+                font-size: 3.4rem;
+                height: 5px;
+                line-height: 0;
+                transform: rotate(90deg);
+                position: relative;
+                top: 0;
+                transition: all .2s;
+            }
+
+            &:hover {
+
+                &::after {
+                    top: 1rem;
+                }
+
+            }
+
+        }
+    }
+
+}

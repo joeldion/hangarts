@@ -1,0 +1,32 @@
+.hp-media-upload__preview {
+    display: none;
+    width: 30rem;
+    height: 15rem;
+    background-size: cover;
+}
+.hp-media-upload__preview.visible {
+    display: block;
+}
+
+.hp-meta-box input,
+.hp-meta-box textarea {
+    width: 30rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hp-meta-box input,
+    .hp-meta-box textarea {
+        width: 100%;
+    }
+}
+
+.hp-meta-box .hp-media-remove  {
+    display: none;
+}
+.hp-meta-box .hp-media-remove.visible {
+    display: inline-block;
+}
+
+#hp-settings h2 {
+    color: #f0483f;
+}

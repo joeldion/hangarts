@@ -1,0 +1,33 @@
+@use '../abstracts' as a;
+
+.back-to-top {
+    width: 4.4rem;
+    height: 4.4rem;
+    background-color: a.$color-yellow;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+    z-index: -1;
+    opacity: 0;
+
+    &.active {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    &::before {
+        content: "";
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(a.$icon-arrow);
+        background-size: 2rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+}

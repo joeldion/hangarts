@@ -1,0 +1,33 @@
+@use '../abstracts' as a;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include a.respond(screen_767) {
+        font-size: 55%;
+    }
+}
+
+.container {
+    display: grid;
+    row-gap: 10rem;
+
+    @include a.respond(screen_767) {
+        row-gap: 8rem;
+    }
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
