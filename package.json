@@ -1,7 +1,7 @@
 {
-    "name": "bonappetitmaski",
+    "name": "hangartspublics",
     "version": "1.0.0",
-    "description": "Site web de Bon appétit Maski",
+    "description": "Site web de HangARTS publics (https://hangartspublics.com)",
     "main": "index.js",
     "scripts": {
         "watch:sass": "sass --watch sass/style.scss style.min.css -w",
