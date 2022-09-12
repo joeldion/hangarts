@@ -108,6 +108,10 @@
                 <a href="tel:+18772272413" class="contact__item">1 877 227-2413</a>
                 <a href="mailto:info@tourismemaskinonge.com" class="contact__item">info@tourismemaskinonge.com</a>
             </section>
+            
+            <section class="logos">
+                <img src="<?php echo HP_URL; ?>/img/logos/logo-entente-developpement-culturel.png" height="100" width="400" srcset="<?php echo HP_URL; ?>/img/logos/logo-entente-developpement-culturel-1x.png 1x, <?php echo HP_URL; ?>/img/logos/logo-entente-developpement-culturel.png 2x" alt="Entente de développement culturel">
+            </section>
 
         </main>
 
